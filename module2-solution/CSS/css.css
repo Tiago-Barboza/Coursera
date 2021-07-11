@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.container h1{
+    text-align: center;
+    margin-top: 3%;
+}
+.container div{
+    position: relative;
+    top: 5%;
+    float: left;
+    width: 30%;
+    margin: 1.5%;
+    background-color: rgb(156, 153, 153);
+    border: 3px solid rgb(59, 51, 26);
+}
+.container div .header2{
+    position: relative;
+    background-color: transparent;
+    width: 99%;
+    border: none;
+}
+.container div .header2 h2{
+    position: absolute;
+    border-bottom: 3px solid rgb(59, 51, 26);
+    border-left: 3px solid rgb(59, 51, 26);
+    width: 150px;
+    top: -0.5vw;
+    right: 0.3%;
+    text-align: center;
+}
+.container div p{
+    padding: 2%;
+}
+.text3-md{
+    visibility: hidden;
+}
+.container .chicken h2{
+    background-color:  skyblue;
+}
+.container .beef h2{
+    background-color: red;
+}
+.container .sushi h2{
+    background-color: salmon;
+}
+
+/*Responsive Design*/
+@media (min-width:992px){
+    /*Não ouve necessidade de adicionar propriedades CSS aqui, pois o Responsive Design, foi criado
+    primeiro para tela com no minímo 992px, com isso todas as propriedades anteriores se encaixam
+    nessa consulta de mídia, e nas demais consultas de mídias, foi ajustado o tamanho de cada*/
+}
+@media (min-width:768px) and (max-width:991px){
+    .container div{
+        width: 45%;
+    }
+    .container .sushi{
+        clear: left;
+        width: 93%;
+    }
+    .container div .header2 h2{
+        position: absolute;
+        top: -0.7vw;
+    }
+    .container .sushi .header2 h2{
+        position: absolute;
+        top: -1.5vw;
+        right: 0.4%;
+    }
+    .container .text3-lg{
+        position: absolute;
+        visibility: hidden;
+    }
+    .container .text3-md{
+        visibility: visible;
+    }
+}
+@media (max-width:767px){
+    .container h1{
+        font-size: min(2em,30vw);
+    }
+    .container div{
+        position: relative;
+        clear: left;
+        width: 94%;
+        font-size: min(17px,5vw);
+    }
+    .container div .header2 h2{
+        position: absolute;
+        top: -1.6vw;
+        right: 0.5%;
+        width: min(150px,50vw);
+    }
+}
